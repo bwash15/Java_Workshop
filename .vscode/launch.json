@@ -6,6 +6,48 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "movie_store_w_exceptions.Main",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnalyzeInput",
+            "request": "launch",
+            "mainClass": "analysis.AnalyzeInput",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch _ArrayList",
+            "request": "launch",
+            "mainClass": "ListsAndCollections._ArrayList",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "movie_store.Main",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch WeeklySteps",
+            "request": "launch",
+            "mainClass": "fitness_tracker.WeeklySteps",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExceptionsMain",
+            "request": "launch",
+            "mainClass": "exceptions.ExceptionsMain",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

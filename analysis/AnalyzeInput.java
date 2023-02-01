@@ -1,3 +1,5 @@
+package analysis;
+
 import java.util.*;
 
 import javax.xml.crypto.Data;
@@ -13,10 +15,12 @@ class SortByValue implements Comparator<DataPoint> {
 class DataPoint {
     String key = "";
     Integer value = 0;
+    PointInTime pointInTime;
 
     DataPoint(String s, Integer i) {
         key = s;
         value = i;
+        pointInTime = new PointInTime();
     }
 }
 
@@ -26,14 +30,13 @@ public class AnalyzeInput {
      * REFACTOR:
      * > Frequency should be returned from method
      * 
-     * @param args
      */
 
     public static void main(String[] args) {
         Console cons = null;
         ArrayList<String> text = new ArrayList<>();
         List<DataPoint> frequencies = new ArrayList<>();
-
+        DataPoint dataPoint;
         Set<String> textSet = new HashSet<>();
         Map<String, Integer> mapOfText = new HashMap<>();
         TreeMap<String, Integer> treeMapOfText = new TreeMap<>();
@@ -58,6 +61,7 @@ public class AnalyzeInput {
         }
 
         // Extracting the Unique Elements > adding list to the Set
+        // Set will remove duplicate data
         textSet.addAll(text);
         // Program Running Entries
         while (running) {
@@ -69,6 +73,8 @@ public class AnalyzeInput {
                 // Creating SET
                 text = convertSplitTextToList(line, text);
                 textSet = copyToSet(text, textSet);
+
+                // Separating word into letters
                 letters = separateIntoChar(line, letters);
 
                 // Starting Analysis
@@ -81,7 +87,7 @@ public class AnalyzeInput {
                     System.out.println(" [" + s + "] appears " + freqOfWord + " times");
                     mapOfText = putIntoMap(s, freqOfWord);
                     treeMapOfText = putIntoTreeMap(s, freqOfWord);
-                    DataPoint dataPoint = new DataPoint(s, freqOfWord);
+                    dataPoint = new DataPoint(s, freqOfWord);
                     frequencies.add(dataPoint);
                 }
 
@@ -90,15 +96,39 @@ public class AnalyzeInput {
                 System.out.print(" -- Sorted results -- \n");
 
                 for (int i = 0; i < frequencies.size(); i++)
-                    System.out.println(" [" + frequencies.get(i).value
-                            + "] time(s) for word - "
-                            + frequencies.get(i).key);
+                    System.out.println(
+                            "\n[" + frequencies.get(i).value + "] time(s) for word - ["
+                                    + frequencies.get(i).key + "]\n"
+                                    + frequencies.get(i).pointInTime.toString());
 
-                // counting all the words in the text with size()
+                System.out.println("==============================================");
+                // counting all the words in the mapOfText with size()
+                for (int index = 0; index < frequencies.size(); index++) {
+                    System.out.println("Frequencies: " + frequencies.get(index).value);
+                }
+                System.out.println("==============================================");
+                System.out.println("Word Count in List of Frequencies: " + frequencies.size() + " so far...");
+                System.out.println("Word Count: " + text.size() + " so far...");
+                System.out.println("==============================================");
+                System.out.println("==============================================");
+
+                System.out.println("==============================================");
+                // counting all the words in the mapOfText with size()
+                System.out.println("Map of Entries Made: " + mapOfText);
+                System.out.println("==============================================");
+                System.out.println("Word Count in HashMap: " + mapOfText.size() + " so far...");
+                System.out.println("Word Count: " + text.size() + " so far...");
+                System.out.println("==============================================");
+                System.out.println("==============================================");
+
+                // counting all the words in the treeMapOftext with size()
                 System.out.println("TreeMap of Entries Made: " + treeMapOfText);
                 System.out.println("==============================================");
-                System.out.println("Word Count: " + text.size() + " so far...\n");
+                System.out.println("Word Count in Tree Map: " + treeMapOfText.size() + " so far...");
+                System.out.println("Word Count: " + text.size() + " so far...");
                 System.out.println("==============================================");
+
+                // Prompting for new entry
                 System.out.print("@ > ");
 
                 // System.out.println("Separating Words into Characters for further
@@ -185,7 +215,12 @@ public class AnalyzeInput {
      */
 
     public static Set<String> copyToSet(List<String> linesList, Set<String> textSet) {
-        textSet.addAll(linesList);
+
+        // putting in a for loop to iterate the list and copy each element
+        for (String string : linesList) {
+            if (!textSet.contains(string))
+                textSet.add(string);
+        }
         return textSet;
 
     }
@@ -271,7 +306,7 @@ public class AnalyzeInput {
      */
     public static void printCharacters(char[] letters) {
         for (int i = 0; i < letters.length; i++) {
-            System.out.print(i + ". " + letters[i]);
+            System.out.println(" [" + i + ". " + letters[i] + "]");
         }
     }
 

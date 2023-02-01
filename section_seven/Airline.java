@@ -11,7 +11,8 @@ public class Airline {
     }
 
     public Person getPerson(int index) {
-        return people[index];
+        Person person = this.people[index];
+        return new Person(person); // copy constructor creates copy of object
     }
 
     /**
@@ -32,14 +33,16 @@ public class Airline {
     // Methods
 
     public void createReservation(Person person) {
-        int index = person.getSeatNumber() - 1; // seat number used as index
-        while (people[person.getSeatNumber() - 1] != null) {
-            System.out.println("\n" + "\tSorry Ms/Mr, " + person.getLastName() + " that seat is already taken");
-            person.chooseSeat();
-        }
-        people[index] = new Person(person);
-        System.out.println("Thank you " + person.getFirstName() + " " + person.getLastName()
-                + " for flying with Java Airways");
 
+        while (people[person.getSeatNumber() - 1] != null) {
+            System.out.println(
+                    "\n" + "\tSorry " + person.getFirstName() + ", seat #" + (person.getSeatNumber())
+                            + " is already taken");
+            person.chooseSeat();
+
+        }
+        people[person.getSeatNumber() - 1] = new Person(person);
+        System.out.println("Thank you " + person.getFirstName()
+                + " for flying with Java Airways. Your seat number is: " + person.getSeatNumber());
     }
 }

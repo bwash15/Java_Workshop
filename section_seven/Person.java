@@ -36,7 +36,7 @@ public class Person {
             this.dateOfBirth = _source.dateOfBirth;
             this.nationality = _source.nationality;
             this.seatNumber = _source.seatNumber;
-            this.passport = new String[3];
+            this.passport = Arrays.copyOf(_source.passport, _source.passport.length);
         }
     }
 
@@ -83,7 +83,7 @@ public class Person {
     }
 
     public int getSeatNumber() {
-        return seatNumber;
+        return this.seatNumber;
     }
 
     public void setSeatNumber(int _seatNumber) {
@@ -129,10 +129,11 @@ public class Person {
     /**
      * FuncName: chooseSeat()
      * This function chooses a random seat number for the passenger
+     * > random number between 1 - 11
      */
     public void chooseSeat() {
-        int randoSeat = (int) Math.random() * 11 + 1;
-        this.seatNumber = randoSeat;
+        seatNumber = (int) (Math.random() * 11) + 1;
+
     }
 
 }

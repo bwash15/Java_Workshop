@@ -3,10 +3,10 @@ package section_seven;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import javax.swing.text.StyleContext.SmallAttributeSet;
-
 public class Main {
     public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
 
         // Objects
         // - Contain Fields
@@ -51,12 +51,21 @@ public class Main {
 
         for (int i = 0; i < people.length; i++) {
             airline.setPerson(people[i]);
-            airline.createReservation(people[i]);
+            boolean approvedPassport = people[i].applyPassport();
+            if (approvedPassport) {
+                people[i].setPassport();
+                airline.createReservation(people[i]);
+            } else {
+                System.out.println("Sorry " + people[i].getFirstName() + ", Your passport: "
+                        + Arrays.toString(people[i].getPassport()) + " is not valid.\n");
+            }
         }
 
         System.out.println(airline.getPerson(1));
         System.out.println(airline.getPerson(5));
         System.out.println(airline.getPerson(10));
+
+        scan.nextLine();
 
         // String[] spareParts = new String[] { "Spare Tires", "Spare Keys" };
         Car nissan = new Car(2020, "Nissan", "Frontier", 10000, "Blue",
@@ -155,8 +164,6 @@ public class Main {
                 + " Passport: " + Arrays.toString(ciera.getPassport()));
 
         System.out.println("Entering the Auto Dealership");
-
-        Scanner scan = new Scanner(System.in);
 
         Car[] cars = new Car[] {
                 new Car(2020, "Nissan", "Frontier", 5000, "red", new String[] { "tires", "keys" }),
