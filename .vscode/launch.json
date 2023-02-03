@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "basketball_team_lineup.Main",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "custom_objects_equality.Main",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch MultiplicationTable",
+            "request": "launch",
+            "mainClass": "inventory.MultiplicationTable",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "movie_store_w_exceptions.Main",
             "projectName": "Java_Workshop_a898e175"
         },
