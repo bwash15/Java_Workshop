@@ -1,4 +1,4 @@
-package fitness_tracker.src.main.java.fitness_tracker;
+package fitness_tracker;
 
 /**
  * Hello world!

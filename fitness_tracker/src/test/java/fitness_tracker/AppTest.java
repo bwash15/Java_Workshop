@@ -1,5 +1,5 @@
 // This is the package name.
-package fitness_tracker.src.test.java.fitness_tracker;
+package fitness_tracker;
 
 // Importing the Test annotation from the JUnit library.
 // import org.junit.jupiter.api.Test;

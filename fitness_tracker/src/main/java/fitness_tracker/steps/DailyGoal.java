@@ -1,4 +1,4 @@
-package fitness_tracker.src.main.java.fitness_tracker.steps;
+package fitness_tracker.steps;
 
 public class DailyGoal {
 

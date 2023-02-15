@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.45.1">
 <file name="/home/bwash/Java_Workshop/fitness_tracker/src/main/java/fitness_tracker/steps/DailyGoal.java">
-<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.src.main.java.fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 <error line="3" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
 <error line="5" column="9" severity="error" message="Variable &apos;dailyGoal&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 <error line="7" column="19" severity="error" message="Name &apos;_goal&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
@@ -9,7 +9,7 @@
 <error line="11" column="47" severity="error" message="Name &apos;_steps&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
 <file name="/home/bwash/Java_Workshop/fitness_tracker/src/main/java/fitness_tracker/steps/WeeklySteps.java">
-<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.src.main.java.fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 <error line="8" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
 <error line="10" column="26" severity="error" message="Variable &apos;dailySteps&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
 <error line="11" column="15" severity="error" message="Variable &apos;dailyGoal&apos; must be private and have accessor methods." source="com.puppycrawl.tools.checkstyle.checks.design.VisibilityModifierCheck"/>
@@ -38,7 +38,7 @@
 <error line="114" column="35" severity="error" message="&apos;20048&apos; is a magic number." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
 <file name="/home/bwash/Java_Workshop/fitness_tracker/src/main/java/fitness_tracker/steps/Fit_trac_steps.java">
-<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.src.main.java.fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.steps&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 <error line="5" column="1" severity="error" message="Missing a Javadoc comment." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocTypeCheck"/>
 <error line="5" column="14" severity="error" message="Name &apos;Fit_trac_steps&apos; must match pattern &apos;^[A-Z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.TypeNameCheck"/>
 <error line="10" column="31" severity="error" message="Name &apos;_steps&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
@@ -47,10 +47,10 @@
 <error line="27" column="35" severity="error" message="Name &apos;_date&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.ParameterNameCheck"/>
 </file>
 <file name="/home/bwash/Java_Workshop/fitness_tracker/src/main/java/fitness_tracker/App.java">
-<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker.src.main.java.fitness_tracker&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="1" column="9" severity="error" message="Name &apos;fitness_tracker&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 <error line="12" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 </file>
 <file name="/home/bwash/Java_Workshop/fitness_tracker/src/test/java/fitness_tracker/AppTest.java">
-<error line="2" column="9" severity="error" message="Name &apos;fitness_tracker.src.test.java.fitness_tracker&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
+<error line="2" column="9" severity="error" message="Name &apos;fitness_tracker&apos; must match pattern &apos;^[a-z]+(\.[a-z][a-z0-9]*)*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.PackageNameCheck"/>
 </file>
 </checkstyle>
