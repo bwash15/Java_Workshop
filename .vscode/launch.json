@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "book_store.Main",
+            "projectName": "Java_Workshop_a898e175"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "basketball_team_lineup.Main",
             "projectName": "Java_Workshop_a898e175"
         },
